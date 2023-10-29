@@ -1,24 +1,15 @@
-def is_prime(n):
-    if n <= 1:
-        return False
-    if n == 2:
-        return True
-    if n % 2 == 0:
-        return False
+def vowelsToUpper(input_string):
+    vowels = "aeiou"
+    result = ""
 
-    for i in range(3, int(n**0.5) + 1, 2):
-        if n % i == 0:
-            return False
+    for char in input_string:
+        if char in vowels:
+            result += char.upper()
+        else:
+            result += char
 
-    return True
+    return result
 
-num = input("\033[1;36mKindly type in an integer: ")
-
-if num.isdigit():
-    num = int(num)
-    if is_prime(num):
-        print("\033[1;32mPrime")
-    else:
-        print("\033[1;31mNot prime")
-else:
-    print("Invalid input. Please enter a valid integer.")
+print(vowelsToUpper(""))
+print(vowelsToUpper("Hello, world!"))  
+print(vowelsToUpper("hello hi bye"))  

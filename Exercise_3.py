@@ -1,10 +1,8 @@
-n = int(input("\033[1;35mEnter the side length of the square: "))
+def create_list_of_tuples(list1, list2):
+    listOfTuples = list(zip(list1, list2))
+    return listOfTuples
 
-if n <= 0:
-    print("\033[1;35mKindly enter a positive side length.")
-else:
-    for i in range(n):
-        if i == 0 or i == n - 1:
-            print("x" * n)
-        else:
-            print("x" + " " * (n - 2) + "x")
+list1 = [1, 2, 3]
+list2 = ["mark", "alice", "john"]
+result = create_list_of_tuples(list1, list2)
+print(result) 

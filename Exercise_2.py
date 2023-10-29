@@ -1,11 +1,6 @@
-# Step 1: Input the size of the array
-size = int(input("\033[1;33mEnter the size of the array: "))
+def square_of_odd_integers(input_list):
+    squared_odds = [x ** 2 for x in input_list if x % 2 != 0]
+    return squared_odds
 
-# Step 2: Input the elements of the array
-elements = input("\033[1;33mEnter the elements separated by space: ").split()
-elements = [int(e) for e in elements]
-
-# Step 3: Display the cube of each element
-for element in elements:
-    cube = element ** 3
-    print(cube)
+print(square_of_odd_integers([2, 4, 3]))  
+print(square_of_odd_integers([0, 0, 1, 1]))  
